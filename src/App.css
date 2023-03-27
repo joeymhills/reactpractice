@@ -5,42 +5,103 @@
 .app-header {
   display: flex;
   justify-content: left;
-  background-color: #58585b;
+  background-color: #282c34;
   height: 15vmin;
 }
 .header-logo {
   flex: 1;
+  font-size: 120%;
   height: 14vmin;
+  color: #61dafb;
+  margin: 0;
+
 }
 
 /* navigation menu */
 
 .nav-box {
-  flex: 2;
+  flex: 3;
   justify-content: center;
   padding-left: 2vmin;
   padding-right: 2vmin;
+  color: #61dafb;
 }
 .nav-bar {
   display: flex;
   flex-direction:row;
   justify-content: center;
-  margin: 0;
-  padding: 2vmin;
+  margin-top: 3.2vmin;
+  padding: 4vmin;
   border: 0;
   list-style-type: none;
   color:rgb(132, 221, 221);
-  font-size: xx-large;
+  font-size: x-large;
 
 }
 #home {
   flex: 1;
 }
+#home:link {
+  color:#61dafb;
+  text-decoration: none;
+  transition-duration: .8s;
+}
+#home:visited {
+  color: #61dafb;
+}
+#home:hover {
+  color: white;
+  transition-duration: .8s;
+}
+
+#about {
+  flex:1;
+}
+#about:link {
+  color:#61dafb;
+  text-decoration: none;
+  transition-duration: .8s;
+}
+#about:visited {
+  color:#61dafb;
+}
+#about:hover {
+  color:white;
+  transition-duration: .8s;
+}
+
+
+
 #projects {
   flex: 1;
 }
+#projects:link {
+  color: #61dafb;
+  text-decoration: none;
+  transition-duration: .8s;
+}
+#projects:visited {
+  color: #61dafb;
+}
+#projects:hover {
+  color: white;
+  transition-duration: .8s;
+}
+
 #contact {
   flex: 1;
+}
+#contact:link {
+  color: #61dafb;
+  text-decoration: none;
+  transition-duration: .8s;
+}
+#contact:visited {
+  color: #61dafb;
+}
+#contact:hover {
+  color: white;
+  transition-duration: .8s;
 }
 
 /* request button */
@@ -52,25 +113,70 @@ justify-content: center;
 }
 
 .request-button {
-  background-color: #c4d6ed;
-  border-radius: 8px;
-  min-width: 5vmin;
-  min-height: 2vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #61dafb;
+  border-radius: 30px;
+  min-width: 4vmin;
+  height: 4vmin;
   box-shadow:none;
+  margin-top: 6.5vmin;
   padding: 2.5vmin;
   border-color: black;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: large;
+  font-size: 20px;
+  transition-duration: .8s;
+  border: none;
+  outline: none;
 }
 .request-button:hover {
-  background-color: grey;
-  transition: 0.7;
+  background-color: white;
+  transition-duration: .8s;
 }
+
+/*end of header content */
 
 .homepage-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 1080px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+#welcome-text {
+  color: #282c34;
+   flex:1;
+}
+.laptop-box {
+  flex:1;
+  margin-top: 20vmin;
+  margin-right: 10vmin;
+
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#laptop {
+  height: 540px;
+  width: 960px;
+
 }
 .homepage-img {
   width:fit-content;
+}
+
+
+
+
+/*Animations*/
+
+@keyframes logo-effect {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
 }
