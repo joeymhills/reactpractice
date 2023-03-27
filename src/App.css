@@ -5,15 +5,16 @@
 .app-header {
   display: flex;
   justify-content: left;
-  background-color: #282c34;
-  height: 15vmin;
+  background-color: white;
+  height: 10vmin;
+  border-bottom:2px solid #252D52;
 }
 .header-logo {
   flex: 1;
-  font-size: 120%;
-  height: 14vmin;
-  color: #61dafb;
+  font-size: 100%;
+  color: #252D52;
   margin: 0;
+  padding:.8vmin;
 
 }
 
@@ -21,16 +22,16 @@
 
 .nav-box {
   flex: 3;
-  justify-content: center;
-  padding-left: 2vmin;
-  padding-right: 2vmin;
+  justify-content: flex-start;
+  padding-left: 4vmin;
+  padding-right: 4vmin;
   color: #61dafb;
 }
 .nav-bar {
   display: flex;
   flex-direction:row;
-  justify-content: center;
-  margin-top: 3.2vmin;
+  justify-content: flex-start;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 4vmin;
   border: 0;
   list-style-type: none;
@@ -42,15 +43,16 @@
   flex: 1;
 }
 #home:link {
-  color:#61dafb;
+  color:#252D52;
   text-decoration: none;
   transition-duration: .8s;
 }
 #home:visited {
-  color: #61dafb;
+  color: #252D52;
 }
 #home:hover {
-  color: white;
+  color: #BCD1FE;
+  text-decoration: overline;
   transition-duration: .8s;
 }
 
@@ -58,15 +60,16 @@
   flex:1;
 }
 #about:link {
-  color:#61dafb;
+  color:#252D52;
   text-decoration: none;
   transition-duration: .8s;
 }
 #about:visited {
-  color:#61dafb;
+  color:#252D52;
 }
 #about:hover {
-  color:white;
+  color:#BCD1FE;
+  text-decoration: overline;
   transition-duration: .8s;
 }
 
@@ -76,15 +79,16 @@
   flex: 1;
 }
 #projects:link {
-  color: #61dafb;
+  color: #252D52;
   text-decoration: none;
   transition-duration: .8s;
 }
 #projects:visited {
-  color: #61dafb;
+  color: #252D52;
 }
 #projects:hover {
-  color: white;
+  color: #BCD1FE;
+  text-decoration: overline;
   transition-duration: .8s;
 }
 
@@ -92,15 +96,16 @@
   flex: 1;
 }
 #contact:link {
-  color: #61dafb;
+  color: #252D52;
   text-decoration: none;
   transition-duration: .8s;
 }
 #contact:visited {
-  color: #61dafb;
+  color: #252D52;
 }
 #contact:hover {
-  color: white;
+  color: #BCD1FE;
+  text-decoration: overline;
   transition-duration: .8s;
 }
 
@@ -117,21 +122,21 @@ justify-content: center;
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #61dafb;
+  background-color: #252D52;
+  color: white;
   border-radius: 30px;
   min-width: 4vmin;
   height: 4vmin;
   box-shadow:none;
-  margin-top: 6.5vmin;
-  padding: 2.5vmin;
-  border-color: black;
+
+  padding: 2vmin;
   font-size: 20px;
   transition-duration: .8s;
   border: none;
   outline: none;
 }
 .request-button:hover {
-  background-color: white;
+  background-color: #BCD1FE;
   transition-duration: .8s;
 }
 
@@ -141,33 +146,58 @@ justify-content: center;
   display: flex;
   flex-direction: row;
   height: 1080px;
+  width: 1920;
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-image: url(./homepage-bg.png);
+  animation: entry-effect 2s;
+
 }
 #welcome-text {
   color: #282c34;
-   flex:1;
-}
-.laptop-box {
   flex:1;
-  margin-top: 20vmin;
-  margin-right: 10vmin;
-
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-#laptop {
-  height: 540px;
-  width: 960px;
-
+  margin-top: 40vh;
 }
 .homepage-img {
   width:fit-content;
 }
+.about-page {
+  background-color:#252D52;
+  height: 1080px;
+  color: white;
+}
+.about-heading {
+  margin: 0;
+  font-size: 425%;
+  padding: 10vmin;
+  font-family: 'gill-sans', sans-serif;
+  text-decoration: none;
+}
+.headshot {
+  border-style: solid;
+  border-color: black;
+  border-radius: 50%;
+  width: 35vmin;
+  height: 35vmin;
+}
 
+.about-p {
+  padding: 10vmin;
+  font-size: 175%;
+  font-family: "Avenir Next", Calibri, Verdana, sans-serif;
+}
 
+.reveal {
+  position: relative;
+  transform: translateY(150);
+  opacity: 0;
+  transition:1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
 
 
 /*Animations*/
@@ -178,5 +208,13 @@ justify-content: center;
   }
   to {
     transform: rotate(360deg)
+  }
+}
+@keyframes entry-effect {
+  from {
+    opacity:0%;
+  }
+  to {
+    opacity:100%;
   }
 }
